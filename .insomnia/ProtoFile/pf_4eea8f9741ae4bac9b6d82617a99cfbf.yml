@@ -1,0 +1,166 @@
+_id: pf_4eea8f9741ae4bac9b6d82617a99cfbf
+type: ProtoFile
+parentId: wrk_cc0d09e23e844c919652fabd287eb5b7
+modified: 1656596373338
+created: 1656596373338
+name: contract-opening-request.proto
+protoText: >+
+  syntax = "proto3";
+
+
+  package com.sberbank.bcpcon.contract.opening;
+
+
+  option java_multiple_files = true;
+
+  option java_package = "com.sberbank.bcpcon.contract.opening.grpc";
+
+  option java_outer_classname = "ContractOpeningRequestProto";
+
+
+  import "google/protobuf/timestamp.proto";
+
+  import "google/protobuf/wrappers.proto";
+
+  import "google/protobuf/empty.proto";
+
+
+  service ContractOpeningRequestService {
+      rpc requestOpeningContract(ContractOpeningRequest) returns (google.protobuf.Empty);
+  }
+
+
+  message ContractOpeningRequest {
+      int64 ucpId = 1;
+      repeated OtherPartyId otherPartyIds = 2;
+      google.protobuf.Timestamp createdDateTime = 3;
+      enum Channel {
+          UNKNOWN = 0;
+          SBOL = 1;
+      }
+      Channel channel = 4;
+      google.protobuf.StringValue session = 5;
+      string clientApplicationId = 6;
+      google.protobuf.StringValue frontEndScenario = 7;
+      string investVP = 8;
+      repeated Contract contracts = 9;
+      ClientConsents clientConsents = 10;
+  }
+
+
+  message OtherPartyId {
+      string type = 1;
+      string value = 2;
+  }
+
+
+  message Contract {
+      string phoneNumber = 1;
+      string email = 2;
+      enum ContractType {
+          UNKNOWN = 0;
+          PRIMARY = 1;
+          IIA = 2;
+      }
+      ContractType type = 3;
+      enum AlgoType {
+          UNKNOWN_AT = 0;
+          NONE = 1;
+          ROBO = 2;
+          MONEY_BOX = 3;
+      }
+      AlgoType algoType = 4;
+      bool investmentGoal = 5;
+      google.protobuf.StringValue frontName = 6;
+      google.protobuf.StringValue baseContractNumber = 7;
+      google.protobuf.BoolValue enableOvernightRepo = 8;
+      string tariff = 9;
+      enum IncomeTargetAccount {
+          UNKNOWN_ITA = 0;
+          BROKER_ACCOUNT = 1;
+          BANK_ACCOUNT = 2;
+      }
+      IncomeTargetAccount incomeTargetAccount = 10;
+      enum TaxPaymentMethod {
+          UNKNOWN_TPM = 0;
+          RUB_ACCOUNT_ONLY = 1;
+          ANY_ACCOUNT = 2;
+      }
+      TaxPaymentMethod taxPaymentMethod = 11;
+      InvestorOrderMethods investorOrderMethods = 12;
+      EnableMarkets enableMarkets = 13;
+      google.protobuf.BoolValue dailyBrokerReport = 14;
+      google.protobuf.BoolValue monthlyBrokerReport = 15;
+      Depo depo = 16;
+      repeated WithdrawalAccount withdrawalAccounts = 17;
+      bool transferFromForeignBroker = 18;
+      google.protobuf.StringValue legalRiskLevel = 19;
+  }
+
+
+  message InvestorOrderMethods {
+      google.protobuf.BoolValue personally = 1;
+      google.protobuf.BoolValue byPhone = 2;
+      google.protobuf.BoolValue byUsingKA = 3;
+      google.protobuf.BoolValue byTwoStepAuth = 4;
+  }
+
+
+  message EnableMarkets {
+      bool fond = 1;
+      bool fx = 2;
+      bool otc = 3;
+      bool forts = 4;
+      bool spb = 5;
+  }
+
+
+  message Depo {
+      enum PaymentMethod {
+          UNKNOWN = 0;
+          AUTO_PAYMENT = 1;
+      }
+      PaymentMethod paymentMethod = 1;
+      OrderMethods orderMethods = 2;
+      ReportMethods reportMethods = 3;
+  }
+
+
+  message OrderMethods {
+      google.protobuf.BoolValue personally = 1;
+      google.protobuf.BoolValue byTrustedPerson = 2;
+      google.protobuf.BoolValue byMail = 3;
+  }
+
+
+  message ReportMethods {
+      google.protobuf.BoolValue personally = 1;
+      google.protobuf.BoolValue byTrustedPerson = 2;
+      google.protobuf.BoolValue byMail = 3;
+  }
+
+
+  message WithdrawalAccount {
+      string number = 1;
+      string currency = 2;
+      google.protobuf.StringValue bankName = 3;
+      string bic = 4;
+      google.protobuf.StringValue corrNumber = 5;
+      google.protobuf.StringValue corrBankName = 6;
+      google.protobuf.StringValue swift = 7;
+      google.protobuf.StringValue recipient = 8;
+      google.protobuf.StringValue intermediaryBankName = 9;
+      google.protobuf.StringValue intermediaryBankSwift = 10;
+  }
+
+
+  message ClientConsents {
+      bool brokerage = 1;
+      bool iia = 2;
+      bool depo = 3;
+      bool depoOpenAcc = 4;
+      bool risk = 5;
+      bool investCons = 6;
+      bool termsOfUse = 7;
+  }
+

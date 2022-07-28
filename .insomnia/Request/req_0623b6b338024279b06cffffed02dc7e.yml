@@ -1,0 +1,21 @@
+_id: req_0623b6b338024279b06cffffed02dc7e
+type: Request
+parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
+modified: 1658993962635
+created: 1658993815716
+url: https://tvlsg-bc0000027.sigma.sbrf.ru:8081/subjects/cbdbo-iis-closing-check-request-value/versions/latest
+name: SR subjects
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1658480003405.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

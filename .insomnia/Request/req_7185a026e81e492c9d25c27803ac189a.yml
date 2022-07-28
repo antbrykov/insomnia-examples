@@ -1,0 +1,21 @@
+_id: req_7185a026e81e492c9d25c27803ac189a
+type: Request
+parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
+modified: 1658993540209
+created: 1658993101559
+url: https://kafka-rest-dgm.apps.ift-gen1-dm.delta.sbrf.ru/topics/cbdbo-iis-closing-check-request
+name: Kafka topics
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1658993101559
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

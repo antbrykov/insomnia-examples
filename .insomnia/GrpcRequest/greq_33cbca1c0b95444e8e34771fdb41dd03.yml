@@ -1,0 +1,148 @@
+_id: greq_33cbca1c0b95444e8e34771fdb41dd03
+type: GrpcRequest
+parentId: fld_807b260fb9e24650a09764b738b78548
+modified: 1657719677979
+created: 1657202509660
+url: localhost:9090
+name: Grpc Create Request local
+description: ""
+protoFileId: pf_4eea8f9741ae4bac9b6d82617a99cfbf
+protoMethodName: /com.sberbank.bcpcon.contract.opening.ContractOpeningRequestService/requestOpeningContract
+metadata: []
+body:
+  text: >-
+    {
+        "ucpId": 1375333521298282000,
+        "otherPartyIds": [
+            {
+                "type": "12345678901234567890123456789012",
+                "value": "1234567890"
+            }
+        ],
+        "createdDateTime": {
+            "seconds": 1649318961,
+            "nanos": 751012000
+        },
+        "channel": "SBOL",
+        "session": {
+            "value": ""
+        },
+        "clientApplicationId": "bryk2022063005",
+        "frontEndScenario": {
+            "value": "SBOL"
+        },
+        "investVP": "long",
+        "contracts": [
+            {
+                "phoneNumber": "+79029000200",
+                "email": "123@mail.ru",
+                "type": "PRIMARY",
+                "algoType": "NONE",
+                "investmentGoal": true,
+                "frontName": {
+                    "value": "Автомобиль"
+                },
+                "enableOvernightRepo": {
+                    "value": false
+                },
+                "tariff": "SelfMade",
+                "incomeTargetAccount": "BROKER_ACCOUNT",
+                "taxPaymentMethod": "ANY_ACCOUNT",
+                "investorOrderMethods": {
+                    "personally": {
+                        "value": true
+                    },
+                    "byPhone": {
+                        "value": true
+                    },
+                    "byUsingKA": {
+                        "value": true
+                    },
+                    "byTwoStepAuth": {
+                        "value": true
+                    }
+                },
+                "enableMarkets": {
+                    "fond": true,
+                    "fx": true,
+                    "otc": true,
+                    "forts": true,
+                    "spb": true
+                },
+                "dailyBrokerReport": {
+                    "value": true
+                },
+                "monthlyBrokerReport": {
+                    "value": true
+                },
+                "depo": {
+                    "paymentMethod": "AUTO_PAYMENT",
+                    "orderMethods": {
+                        "personally": {
+                            "value": true
+                        },
+                        "byTrustedPerson": {
+                            "value": true
+                        },
+                        "byMail": {
+                            "value": true
+                        }
+                    },
+                    "reportMethods": {
+                        "personally": {
+                            "value": true
+                        },
+                        "byTrustedPerson": {
+                            "value": true
+                        },
+                        "byMail": {
+                            "value": true
+                        }
+                    }
+                },
+                "withdrawalAccounts": [
+                    {
+                        "number": "42307810638250005630",
+                        "currency": "RUB",
+                        "bankName": {
+                            "value": "СДО N 9038/01760 Московского банка ОАО \"Сбербанк России\""
+                        },
+                        "bic": "044525225",
+                        "corrNumber": {
+                            "value": "30101810400000000225"
+                        },
+                        "corrBankName": {
+                            "value": "ОПЕРУ Московского ГТУ Банка России"
+                        },
+                        "swift": {
+                            "value": "PBANUA2K"
+                        },
+                        "recipient": {
+                            "value": "poluchatel"
+                        },
+                        "intermediaryBankName": {
+                            "value": "JP MORGAN CHASE BANK"
+                        },
+                        "intermediaryBankSwift": {
+                            "value": "CHASUS33"
+                        }
+                    }
+                ],
+                "transferFromForeignBroker": false,
+                "legalRiskLevel": {
+                    "value": "1"
+                }
+            }
+        ],
+        "clientConsents": {
+            "brokerage": true,
+            "iia": true,
+            "depo": true,
+            "depoOpenAcc": true,
+            "risk": true,
+            "investCons": true,
+            "termsOfUse": true
+        }
+    }
+metaSortKey: -1656741897446.75
+isPrivate: false

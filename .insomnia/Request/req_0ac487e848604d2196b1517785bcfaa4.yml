@@ -1,0 +1,29 @@
+_id: req_0ac487e848604d2196b1517785bcfaa4
+type: Request
+parentId: fld_df1e288f78f946a7a3c611d6107a9292
+modified: 1658997826130
+created: 1656675627014
+url: 10.53.114.110:4455/get
+name: Stub Ucp
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"clientId": 1231231321,
+    	"sourceSystem": "BcpCon"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1656675627014
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

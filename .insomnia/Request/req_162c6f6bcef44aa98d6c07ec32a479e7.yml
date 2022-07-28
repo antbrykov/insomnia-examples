@@ -1,0 +1,21 @@
+_id: req_162c6f6bcef44aa98d6c07ec32a479e7
+type: Request
+parentId: fld_807b260fb9e24650a09764b738b78548
+modified: 1656941202149
+created: 1656941198697
+url: localhost:8080/actuator/info
+name: actuator info
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1656808167979.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

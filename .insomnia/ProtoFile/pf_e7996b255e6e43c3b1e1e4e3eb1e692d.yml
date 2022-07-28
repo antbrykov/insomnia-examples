@@ -1,0 +1,296 @@
+_id: pf_e7996b255e6e43c3b1e1e4e3eb1e692d
+type: ProtoFile
+parentId: wrk_cc0d09e23e844c919652fabd287eb5b7
+modified: 1656596300950
+created: 1656596300950
+name: contract.proto
+protoText: >
+  syntax = "proto3";
+
+
+  package ru.sberbank.bcpcon.contract;
+
+
+  option java_multiple_files = true;
+
+  option java_package = "ru.sberbank.contract.grpc";
+
+  option java_outer_classname = "ContractServiceProto";
+
+
+  import "google/protobuf/timestamp.proto";
+
+  import "google/protobuf/wrappers.proto";
+
+
+  service ContractModificationService {
+    rpc create(ContractCreateRequest) returns (ContractResponse);
+  }
+
+
+  service ContractService {
+    rpc getContractNumbersByUcpId(UcpIdRequest) returns (ContractNumbersResponse);
+  }
+
+
+  message ContractCreateRequest {
+    Contract contract = 1;
+  }
+
+
+  message ContractResponse {
+    string number = 1;
+    google.protobuf.Timestamp openDate = 2;
+  }
+
+
+  enum PersonType {
+    UNKNOWN = 0;
+    INDIVIDUAL = 1;
+    LEGAL_ENTITY = 2;
+  }
+
+
+  enum ConnectionType {
+    UNKNOWN_CT = 0;
+    INVESTOR = 1;
+    TRUSTED_PERSON = 2;
+    LEGAL_REPRESENTATIVE = 3;
+    INSOLVENCY_REPRESENTATIVE = 4;
+    TRUSTOR = 5;
+    TRUSTEE = 6;
+    BENEFICIARY = 7;
+    CEO = 8;
+    SOLE_EXECUTIVE_BODY = 9;
+    ACCOUNT_MANAGER = 10;
+  }
+
+
+  message UcpIdRequest {
+    int64 ucpId = 1;
+    PersonType personType = 2;
+    ConnectionType connectionType = 3;
+  }
+
+
+  message ContractNumbersResponse {
+    repeated string number = 1;
+  }
+
+
+
+  message Contract {
+    VersionInfo versionInfo = 1;
+    enum ContractOwnerType {
+      UNKNOWN = 0;
+      INDIVIDUAL = 1;
+      LEGAL_ENTITY = 2;
+    }
+    ContractOwnerType ownerType = 2;
+    enum ContractType {
+      UNKNOWN_CT = 0;
+      PRIMARY = 1;
+      IIA = 2;
+    }
+    ContractType type = 3;
+    DepositaryContractInfo depositaryContractInfo = 4;
+    Conditions conditions = 5;
+    repeated Connection connections = 6;
+  }
+
+
+  message VersionInfo {
+    VersionDocument versionDocument = 1;
+  }
+
+
+  message VersionDocument {
+    string number = 1;
+    enum SourceType {
+      UNKNOWN = 0;
+      VSP = 1;
+      SBOL = 2;
+      SI = 3;
+      SBBOL = 4;
+      UCP = 5;
+      CKR = 6;
+      SBOL_PRO = 7;
+    }
+    SourceType source = 2;
+    enum DocumentType {
+      UNKNOWN_DT = 0;
+      APPLICATION = 1;
+      ORDER = 2;
+    }
+    DocumentType type = 3;
+    google.protobuf.Timestamp date = 4;
+  }
+
+
+  message DepositaryContractInfo {
+    google.protobuf.BoolValue isOuter = 1;
+    google.protobuf.BoolValue isSpecial = 2;
+    enum CommissionPaymentMethod {
+      UNKNOWN = 0;
+      DIRECT_DEBIT = 1;
+      INVOICE = 2;
+    }
+    CommissionPaymentMethod commissionPaymentMethod = 3;
+    Details details = 4;
+    OuterDepoDetails outerDepoDetails = 5;
+  }
+
+
+  message Details {
+    repeated OwnerInforming ownerOrders = 1;
+    repeated OwnerInforming ownerMessages = 2;
+  }
+
+
+  message OwnerInforming {
+    enum InformingType {
+      UNKNOWN = 0;
+      PERSON = 1;
+      MAIL = 2;
+      ACCORDING_TO_ARRANGEMENT = 3;
+      TRUSTED_PERSON = 4;
+      REPRESENTATIVE_PERSON = 5;
+    }
+    InformingType type = 1;
+  }
+
+
+  message OuterDepoDetails {
+    google.protobuf.StringValue accountNumber = 1;
+    google.protobuf.StringValue name = 2;
+    google.protobuf.StringValue tradingUnitAccount = 3;
+    google.protobuf.StringValue contractDetails = 4;
+  }
+
+
+  message Conditions {
+    Tariff tariff = 1;
+    repeated Account withdrawalAccounts = 2;
+    repeated Marketplace marketplaces = 3;
+    InvestorOrderMethods investorOrderMethods = 4;
+    ReportSendingMethods reportSendingMethods = 5;
+    enum IncomeGettingMethod {
+      UNKNOWN = 0;
+      BROKER_ACCOUNT = 1;
+      BANK_ACCOUNT = 2;
+    }
+    IncomeGettingMethod incomeGettingMethod = 6;
+    enum TaxPaymentMethod {
+      UNKNOWN_TPM = 0;
+      RUB_ACCOUNT_ONLY = 1;
+      ANY_ACCOUNT = 2;
+    }
+    TaxPaymentMethod taxPaymentMethod = 7;
+    repeated Contact contacts = 8;
+    Subscriptions subscriptions = 9;
+    TradingDetails tradingDetails = 10;
+    google.protobuf.StringValue mainAgreementCode = 11;
+    repeated ClientConsent clientConsents = 12;
+    enum RoboType {
+      NONE = 0;
+      ROBO = 1;
+      MONEY_BOX = 2;
+    }
+    RoboType roboType = 13;
+    bool hasInvestGoal = 14;
+    google.protobuf.StringValue contractLabel = 15;
+    google.protobuf.StringValue tbCode = 16;
+    google.protobuf.StringValue legalRiskLevel = 17;
+    google.protobuf.StringValue riskCategory = 18;
+  }
+
+
+  message ClientConsent {
+    enum Name {
+      UNKNOWN = 0;
+      BROK = 1;
+      DEPO = 2;
+      BROKIIA = 3;
+    }
+    Name name = 1;
+  }
+
+
+  message Tariff {
+    string code = 1;
+  }
+
+
+  message Account {
+    google.protobuf.StringValue currencyCode = 1;
+    string number = 2;
+    google.protobuf.StringValue bankName = 3;
+    google.protobuf.StringValue bic = 4;
+    google.protobuf.StringValue loroAccount = 5;
+    google.protobuf.StringValue loroAccountBankName = 6;
+    google.protobuf.StringValue swift = 7;
+    google.protobuf.StringValue intermediaryBankName = 8;
+    google.protobuf.StringValue intermediaryBankSwift = 9;
+    google.protobuf.StringValue payee = 10;
+  }
+
+
+  message Marketplace {
+    enum Name {
+      UNKNOWN = 0;
+      FOND = 1;
+      OTC = 2;
+      FX = 3;
+    }
+    Name name = 1;
+    google.protobuf.StringValue riskLevel = 2;
+    bool isOptionsEnabled = 3;
+  }
+
+
+  message InvestorOrderMethods {
+    bool isPersonEnabled = 1;
+    bool isPhoneEnabled = 2;
+    bool isQuikWithTokenEnabled = 3;
+    bool isQuikWithDualAuthEnabled = 4;
+  }
+
+
+  message ReportSendingMethods {
+    bool isPersonEnabled = 1;
+    bool isRepresentativeEnabled = 2;
+  }
+
+
+  message Contact {
+    enum Type {
+      UNKNOWN = 0;
+      PHONE = 1;
+      EMAIL = 2;
+    }
+    Type type = 1;
+    string value = 2;
+    google.protobuf.BoolValue isVerified = 3;
+  }
+
+
+  message Subscriptions {
+    bool isDailyBrokReportEnabled = 1;
+    bool isMonthlyBrokReportEnabled = 2;
+    bool isQuarterlyBrokReportEnabled = 3;
+    bool isMarginCallReportEnabled = 4;
+    bool isAnalyticsByMailEnabled = 5;
+    bool isAnalyticsBySMSEnabled = 6;
+  }
+
+
+  message TradingDetails {
+    bool isRepoOvernightEnabled = 1;
+  }
+
+
+  message Connection {
+    int64 ucpId = 1;
+    ConnectionType connectionType = 2;
+    PersonType personType = 3;
+  }

@@ -1,0 +1,21 @@
+_id: req_238ce92d7e964c91a1bd2ddb8c3e05a9
+type: Request
+parentId: fld_807b260fb9e24650a09764b738b78548
+modified: 1656941271101
+created: 1656941266663
+url: localhost:8080/actuator/prometheus
+name: actuator prometheus
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1656741897496.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

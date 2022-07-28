@@ -1,0 +1,21 @@
+_id: req_30b4f38965434cc7ab645661bbdd2bb7
+type: Request
+parentId: fld_807b260fb9e24650a09764b738b78548
+modified: 1656941289505
+created: 1656941286390
+url: localhost:8080/actuator/health
+name: actuator health
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1656775032738.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
