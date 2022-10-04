@@ -1,9 +1,9 @@
 _id: req_0623b6b338024279b06cffffed02dc7e
 type: Request
 parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
-modified: 1658993962635
+modified: 1660140607504
 created: 1658993815716
-url: https://tvlsg-bc0000027.sigma.sbrf.ru:8081/subjects/cbdbo-iis-closing-check-request-value/versions/latest
+url: https://tvlsg-bc0000027.sigma.sbrf.ru:8081/subjects
 name: SR subjects
 description: ""
 method: GET

@@ -1,9 +1,9 @@
-_id: req_7185a026e81e492c9d25c27803ac189a
+_id: req_ee8bca00f03b4b4f9771539bdf3a4eae
 type: Request
-parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
-modified: 1664180035698
-created: 1658993101559
-url: https://kafka-rest-dgm.apps.ift-gen1-dm.delta.sbrf.ru/topics/legal_deduplication
+parentId: fld_584cecaf49b94863a88ede8525894461
+modified: 1664180403806
+created: 1664180326162
+url: https://kafka-rest-dgm-dev.apps.dev-gen.sigma.sbrf.ru/topics/legal_deduplication
 name: Kafka topics
 description: ""
 method: GET
@@ -11,7 +11,7 @@ body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1658993101559
+metaSortKey: -1656596303074
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

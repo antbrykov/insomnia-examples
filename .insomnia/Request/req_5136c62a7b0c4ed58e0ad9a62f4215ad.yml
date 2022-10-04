@@ -1,0 +1,27 @@
+_id: req_5136c62a7b0c4ed58e0ad9a62f4215ad
+type: Request
+parentId: fld_807b260fb9e24650a09764b738b78548
+modified: 1664871144835
+created: 1664810667089
+url: localhost:8087/gfl-mock/get-full-product-list
+name: get Mocked Gfl Data
+description: ""
+method: POST
+body:
+  mimeType: application/xml
+  text: |-
+    <GetFullProductListRq>
+    </GetFullProductListRq>
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/xml
+authentication: {}
+metaSortKey: -1664810667089
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

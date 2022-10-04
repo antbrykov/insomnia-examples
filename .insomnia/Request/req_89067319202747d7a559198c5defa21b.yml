@@ -1,17 +1,17 @@
-_id: req_7185a026e81e492c9d25c27803ac189a
+_id: req_89067319202747d7a559198c5defa21b
 type: Request
-parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
-modified: 1664180035698
-created: 1658993101559
-url: https://kafka-rest-dgm.apps.ift-gen1-dm.delta.sbrf.ru/topics/legal_deduplication
-name: Kafka topics
+parentId: fld_584cecaf49b94863a88ede8525894461
+modified: 1664190748752
+created: 1664190521430
+url: https://10.63.146.62:8081/schemas/ids/85
+name: SR subjects ip
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1658993101559
+metaSortKey: -1656596303099
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

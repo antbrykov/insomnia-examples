@@ -1,0 +1,34 @@
+_id: req_d5b2c9c2723f44d69c0a6204aff3f871
+type: Request
+parentId: fld_584cecaf49b94863a88ede8525894461
+modified: 1664190087472
+created: 1664180433493
+url: https://kafka-rest-dgm-dev.apps.dev-gen.sigma.sbrf.ru/topics/legal_deduplication
+name: Kafka send message
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "records": [
+        {
+          "value": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8bnMxNTpvcmdhbml6YXRpb25NZXJnZWRFdmVudCB4bWxuczpuczE1PSJodHRwOi8vd3d3LnNiZXJiYW5rLnJ1L3VjcC9jb3JwL2V2ZW50LzEuMCI+CiDigaMg4oGjIOKBoyDigaM8bWFzdGVyUGFydHlJZD4xNzI0MTkxODU3NjcxOTI2Nzc5PC9tYXN0ZXJQYXJ0eUlkPgog4oGjIOKBoyDigaMg4oGjPG1hc3RlclBhcnR5VmVyc2lvbj4yPC9tYXN0ZXJQYXJ0eVZlcnNpb24+CiDigaMg4oGjIOKBoyDigaM8Y2xvc2VkUGFydHlJZD4xNzI0MTkxODU3NjgyMzM5MzgxPC9jbG9zZWRQYXJ0eUlkPgog4oGjIOKBoyDigaMg4oGjPGNsb3NlZFBhcnR5VmVyc2lvbj4yPC9jbG9zZWRQYXJ0eVZlcnNpb24+CiDigaMg4oGjIOKBoyDigaM8dHJpZ2dlcmVkU3lzdGVtPgog4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBozxjb2RlPjU5PC9jb2RlPgog4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBozxuYW1lPtCa0LvQuNC10L3RgtGB0LrQuNC5INC80L7QtNGD0LvRjCDQn9Cf0KDQkTwvbmFtZT4KIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaM8c2VjcmV0TmFtZT51cm46c2JyZnN5c3RlbXM6OTkta21wcHJiPC9zZWNyZXROYW1lPgog4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBozxwYXJ0eVR5cGU+CiDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBozxjb2RlPjM8L2NvZGU+CiDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjIOKBozxuYW1lPtCe0LHRidC40Lk8L25hbWU+CiDigaMg4oGjIOKBoyDigaMg4oGjIOKBoyDigaMg4oGjPC9wYXJ0eVR5cGU+CiDigaMg4oGjIOKBoyDigaM8L3RyaWdnZXJlZFN5c3RlbT4KIOKBoyDigaMg4oGjIOKBozxjbG9zZWRQYXJ0eURhdGU+MjAyMi0wOS0yMVQxMToyNTowMC41ODcrMDM6MDA8L2Nsb3NlZFBhcnR5RGF0ZT4KPC9uczE1Om9yZ2FuaXphdGlvbk1lcmdlZEV2ZW50Pg=="
+        }
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/vnd.kafka.binary.v2+json
+  - name: Accept
+    value: application/vnd.kafka.v2+json, application/vnd.kafka+json, application/json
+authentication: {}
+metaSortKey: -1656596302999
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

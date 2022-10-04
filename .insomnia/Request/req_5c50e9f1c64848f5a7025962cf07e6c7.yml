@@ -1,0 +1,27 @@
+_id: req_5c50e9f1c64848f5a7025962cf07e6c7
+type: Request
+parentId: fld_584cecaf49b94863a88ede8525894461
+modified: 1664897027053
+created: 1664871096018
+url: 10.55.82.153:7778/gfl-mock/get-cod-accounts
+name: mocked Gfl Data
+description: ""
+method: POST
+body:
+  mimeType: application/xml
+  text: |-
+    <GetFullProductListRq>
+    </GetFullProductListRq>
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/xml
+authentication: {}
+metaSortKey: -1656596303174
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,7 +1,7 @@
 _id: req_da7410bb99294f2bbc2473b0f195290b
 type: Request
 parentId: fld_c22aefd9e27240e9ad1528762f5d3df2
-modified: 1658994040088
+modified: 1664190084087
 created: 1658993377439
 url: https://kafka-rest-dgm.apps.ift-gen1-dm.delta.sbrf.ru/topics/cbdbo-iis-closing-check-request
 name: Kafka send message
@@ -25,7 +25,7 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/vnd.kafka.avro.v2+json
+    value: application/json
 authentication: {}
 metaSortKey: -1657966905252
 isPrivate: false
